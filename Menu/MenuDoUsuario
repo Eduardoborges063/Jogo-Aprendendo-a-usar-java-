@@ -1,0 +1,27 @@
+import Menu.CadastroDeUsuario;
+import Menu.InformacoesPersonagem;
+import java.util.Scanner;
+
+public void Menu{
+    plublic static informacoesPersonagem Jogador = new informacoesPersonagem();
+    public static void menu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bem-vindo ao jogo " + Jogador.dados.nome + "!");
+        
+        System.out.println("1. Criar personagem");
+        System.out.println("2. Sair");
+        System.out.print("Escolha uma opção: ");
+        int opcao = sc.nextInt();
+        switch (opcao) {
+            case 1:
+                Jogador.criarPersonagem();
+                break;
+            case 2:
+                System.out.println("Saindo do jogo...");
+                break;
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+    }
+}
